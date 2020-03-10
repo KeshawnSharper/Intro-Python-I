@@ -22,3 +22,18 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+month = int(input("select a month"))
+year = int(input("select a year"))
+dt = datetime.today()
+
+def program_calendar(*args):
+  if len(args) == 0:
+    print(calendar.month(dt.year,dt.month))
+  elif len(args) == 1:
+    print(calendar.month(dt.year,month))
+  elif len(args) == 2:
+    print(calendar.month(year,month))
+  else:
+    print("none")
+program_calendar(int(month),int(year))
+
